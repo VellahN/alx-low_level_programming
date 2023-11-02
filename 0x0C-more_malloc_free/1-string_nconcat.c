@@ -1,12 +1,14 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- * string_nconcat - concatenate two strings
+ * string_nconcat - concatenate two strings while
+ * second string is an n value
+ *
  * @s1: string one
  * @s2: string two
- * @n: no of elements to concatenate from s2
+ * @n: no of element to concatenate from s2
  *
- * Return: pointer to the new allocated memory
+ * Return: poimnter to the new allocated memory
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
@@ -20,6 +22,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		for (i = 0; s1[i] != '\0'; i++)
 			;
 	}
+
 	if (s2 == NULL)
 		j = 0;
 	else
@@ -37,5 +40,5 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	for (k = 0; k < j; k++)
 		s[k + i] = s2[k];
 	s[i + j] = '\0';
-	return (0);
+	return (s);
 }
